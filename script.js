@@ -1,4 +1,4 @@
-const longGame = 5;
+const gameLengthInRounds = 5;
 
 console.log(game());
 
@@ -28,7 +28,7 @@ function describeTheChoice(choice) {
 function game() {
     let computerCounter = 0;
     let playerCounter = 0;
-    for (let i = 0; i < longGame; i++) {
+    for (let i = 0; i < gameLengthInRounds; i++) {
         let result = playOneRound(getComputerChoise(), getPlayerChoise());
         if (result.includes('Win')) {
             playerCounter += 1;
