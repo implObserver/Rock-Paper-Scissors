@@ -28,7 +28,7 @@ function describeTheChoice(choice) {
 function game() {
     let computerCounter = 0;
     let playerCounter = 0;
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < longGame; i++) {
         let result = playOneRound(getComputerChoise(), getPlayerChoise());
         if (result.includes('Win')) {
             playerCounter += 1;
