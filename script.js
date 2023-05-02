@@ -1,7 +1,11 @@
-let playerSelection = prompt('Rock, Paper or Scissors?').toLowerCase();
-let computerSelection = getComputerChoise();
+const longGame = 5;
 
-console.log(playOneRound(computerSelection, playerSelection));
+console.log(game());
+
+function getPlayerChoise() {
+    let playerSelection = prompt('Rock, Paper or Scissors?').toLowerCase();
+    return playerSelection;
+}
 
 function getComputerChoise() {
     let choice = Math.floor(Math.random() * 3) + 1;
@@ -19,6 +23,26 @@ function describeTheChoice(choice) {
         default:
             break;
     }
+}
+
+function game() {
+    let computerCounter = 0;
+    let playerCounter = 0;
+    for (let i = 0; i < 5; i++) {
+        let result = playOneRound(getComputerChoise(), getPlayerChoise());
+        if (result.includes('Win')) {
+            playerCounter += 1;
+        } else if (result.includes('Lose')) {
+            computerCounter += 1;
+        }
+        console.log(result);
+    }
+
+    return computerCounter === playerCounter
+        ? 'Result game: draw'
+        : computerCounter > playerCounter
+            ? `You lose by a score of ${computerCounter} - ${playerCounter}`
+            : `You won by a score of ${playerCounter} - ${computerCounter}`;
 }
 
 function playOneRound(computerSelection, playerSelection) {
