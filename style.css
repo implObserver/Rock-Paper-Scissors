@@ -51,6 +51,12 @@ body {
     top: -5px;
 }
 
+.buttons__button__rock:focus,
+.buttons__button__paper:focus,
+.buttons__button__scissors:focus {
+    outline: none;
+}
+
 img {
     max-width: 240px;
     max-height: 240px;
