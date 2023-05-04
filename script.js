@@ -1,4 +1,4 @@
-const gameLengthInRounds = 5;
+const gameLengthInRounds = 1;
 
 console.log(game());
 
