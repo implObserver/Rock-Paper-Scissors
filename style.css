@@ -19,11 +19,11 @@ body {
     font-size: 72px;
 }
 
-.score {
+.scorecard__score {
     font-size: 109px;
 }
 
-.overview {
+.scorecard__overview {
     font-size: 36px;
 }
 
