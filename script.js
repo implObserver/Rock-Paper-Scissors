@@ -27,13 +27,13 @@ function selectPaper() {
 
 
 function game(playerSelection) {
-    if (!isGameOver()) {
-        let result = playOneRound(getComputerChoise(), playerSelection);
-        outputOverview(result);
-        addEntryInJournal(result);
-        scoreCount(result);
-        outputScore();
-    } else {
+    let result = playOneRound(getComputerChoise(), playerSelection);
+    outputOverview(result);
+    addEntryInJournal(result);
+    scoreCount(result);
+    outputScore();
+
+    if (isGameOver()) {
         gameOver();
     }
 }
