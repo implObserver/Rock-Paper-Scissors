@@ -17,20 +17,21 @@ body {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    border: red 1px solid;
 }
 
 .title {
     font-size: 72px;
     display: flex;
     justify-content: center;
-    border: red 1px solid;
+    align-items: center;
+    min-height: 250px;
 }
 
 .buttons {
     display: flex;
-    justify-content: center;
     flex-grow: 1;
+    justify-content: center;
+    padding-bottom: 30px;
 }
 
 .buttons__button__rock,
@@ -42,12 +43,17 @@ body {
     background-color: white;
 }
 
+img {
+    max-width: 240px;
+    max-height: 240px;
+}
+
 .scorecard {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: red 1px solid;
+    padding-bottom: 30px;
 }
 
 .scorecard__score {
@@ -61,7 +67,5 @@ body {
 .journal {
     display: flex;
     font-size: 36px;
-    border: red 1px solid;
     justify-content: center;
-    
 }
