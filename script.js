@@ -1,6 +1,5 @@
 const gameLengthInRounds = 1;
 
-console.log(game());
 
 function getPlayerChoise() {
     let playerSelection = prompt('Rock, Paper or Scissors?').toLowerCase();
