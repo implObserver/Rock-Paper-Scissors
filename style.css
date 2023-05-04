@@ -41,6 +41,14 @@ body {
     width: 100%;
     height: 100%;
     background-color: white;
+    position: relative;
+    cursor: pointer;
+}
+
+.buttons__button__rock:hover,
+.buttons__button__paper:hover,
+.buttons__button__scissors:hover {
+    top: -5px;
 }
 
 img {
